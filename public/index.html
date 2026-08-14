@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Bangalore pincodes and discover matching areas and post offices." />
+  <title>Bangalore Pincode Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="badge">FULL-STACK • BENGALURU</div>
+      <h1>Bangalore <span>Pincode</span> Explorer</h1>
+      <p>Enter a 6-digit pincode to instantly discover the corresponding Bangalore area and post-office details.</p>
+      <form id="searchForm" class="search" autocomplete="off">
+        <label for="pincode">Pincode</label>
+        <div class="input-row">
+          <input id="pincode" name="pincode" inputmode="numeric" maxlength="6" placeholder="e.g. 560001" aria-describedby="hint" />
+          <button type="submit">Explore</button>
+        </div>
+        <small id="hint">Bangalore pincodes normally start with 56.</small>
+      </form>
+    </section>
+
+    <section class="content" aria-live="polite">
+      <div class="toolbar">
+        <div><h2 id="resultTitle">Popular Bangalore pincodes</h2><p id="resultMeta">Try one of the examples below.</p></div>
+        <button id="clearBtn" class="ghost" type="button">Clear</button>
+      </div>
+      <div id="results" class="grid"></div>
+    </section>
+
+    <footer>Built with Node.js + Express • Live lookup via India Post public API • Fallback dataset included</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
